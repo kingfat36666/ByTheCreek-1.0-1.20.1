@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class BubbleEyeGoldfishRenderer extends MobRenderer<BubbleEyeGoldfishEntity, BubbleEyeGoldfish<BubbleEyeGoldfishEntity>> {
     public BubbleEyeGoldfishRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new BubbleEyeGoldfish<>(pContext.bakeLayer(ModModelLayers.BUBBLEEYEGOLDFISH_LAYER)), 2f);
+        super(pContext, new BubbleEyeGoldfish<>(pContext.bakeLayer(ModModelLayers.BUBBLEEYEGOLDFISH_LAYER)), 0.5f);
     }
 
     @Override

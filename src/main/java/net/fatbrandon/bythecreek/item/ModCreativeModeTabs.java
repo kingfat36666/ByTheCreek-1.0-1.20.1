@@ -19,7 +19,9 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                     pOutput.accept(ModItems.GOLDFISH.get());
                     pOutput.accept(ModItems.GOLDFISH_BUCKET.get());
+                    pOutput.accept(ModItems.BUBBLE_EYE_GOLDFISH_SPAWN_EGG.get());
                     pOutput.accept(ModItems.FRIED_FISH.get());
+
                     })
                     .build());
 

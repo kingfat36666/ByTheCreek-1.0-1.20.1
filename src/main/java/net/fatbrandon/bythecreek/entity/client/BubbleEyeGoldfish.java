@@ -5,6 +5,9 @@ package net.fatbrandon.bythecreek.entity.client;// Made with Blockbench 5.0.7
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.fatbrandon.bythecreek.entity.animations.ModAnimationDefinitions;
+import net.fatbrandon.bythecreek.entity.custom.BubbleEyeGoldfishEntity;
+import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelPart;
@@ -28,7 +31,7 @@ public class BubbleEyeGoldfish<T extends Entity> extends HierarchicalModel<T> {
 	public BubbleEyeGoldfish(ModelPart root) {
 		this.bubbleeyegoldfish = root.getChild("bubbleeyegoldfish");
 		this.body = this.bubbleeyegoldfish.getChild("body");
-		this.reye = this.body.getChild("body");
+		this.reye = this.body.getChild("reye");
 		this.leye = this.body.getChild("leye");
 		this.rfin = this.body.getChild("rfin");
 		this.lfin = this.body.getChild("lfin");
@@ -74,6 +77,8 @@ public class BubbleEyeGoldfish<T extends Entity> extends HierarchicalModel<T> {
 
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.root().getAllParts().forEach(ModelPart::resetPose);
+		this.animateWalk(ModAnimationDefinitions.swim, limbSwing, limbSwingAmount,2f,2.5f);
 
 	}
 
