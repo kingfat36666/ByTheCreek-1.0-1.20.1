@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0,
+  "group": "fried_fish",
+  "ingredient": {
+    "item": "bythecreek:goldfish"
+  },
+  "result": "bythecreek:fried_fish"
+}
